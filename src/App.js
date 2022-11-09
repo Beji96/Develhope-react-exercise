@@ -2,10 +2,12 @@
 import './App.css';
 
 function App() {
-  const hello = 'Hello World'
+  function hello (name){
+    return <h1> hello {name}</h1>
+  }
   return (
     <div className="App">
-      <h1>{hello}</h1>
+      {hello("flavius")}
     </div>
   );
 }
