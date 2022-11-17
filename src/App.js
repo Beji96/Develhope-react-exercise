@@ -2,12 +2,12 @@
 import './App.css';
 
 function App() {
-  const hello = 'Hello World'
-  return (
+  const sum =(a,b)=> <h2>{a+b}</h2>;
+  return(
     <div className="App">
-      <h1>{hello}</h1>
+      {sum(8,9)}
     </div>
-  );
+  )
 }
 
 export default App;
