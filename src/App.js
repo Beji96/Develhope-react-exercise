@@ -1,13 +1,13 @@
 
 import './App.css';
+import Hello from './Hello';
 
 function App() {
-  const sum =(a,b)=> <h2>{a+b}</h2>;
-  return(
-    <div className="App">
-      {sum(8,9)}
-    </div>
-  )
+ return(
+  <div className="App">
+    <Hello/>
+  </div>
+ )
 }
 
 export default App;
