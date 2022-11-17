@@ -6,12 +6,15 @@
 
 import React, { Component } from 'react'
 
-export class Welcome extends Component {
+ class Welcome extends Component {
   render() {
     return (
       <p>Welcome, {this.props.name}!</p>
     )
   }
+}
+Welcome.defaultProps={
+    name: "Flavius"
 }
 
 export default Welcome
