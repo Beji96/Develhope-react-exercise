@@ -4,10 +4,11 @@ import Hello from './Hello';
 import Welcome from './Welcome';
 
 function App() {
+  const myName = "Flavius"
  return(
   <div className="App">
     <Hello/>
-    <Welcome name ="Flavius" age ={26}/>
+    <Welcome name ={myName} age ={26}/>
     
   </div>
  )
