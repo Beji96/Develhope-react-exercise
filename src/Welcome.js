@@ -5,13 +5,14 @@
 //passing it a name prop of your choosing.
 
 import React, { Component } from 'react'
+import Age from './Age'
 
  class Welcome extends Component {
   render() {
     return (
       <div>
       <p>Welcome, {this.props.name}!</p>
-      <p>My age is {this.props.age}</p>
+      <Age age ={26}/>
       </div>
     )
   }

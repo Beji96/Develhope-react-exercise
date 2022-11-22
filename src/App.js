@@ -1,4 +1,5 @@
 
+import Age from './Age';
 import './App.css';
 import Hello from './Hello';
 import Welcome from './Welcome';
@@ -8,7 +9,8 @@ function App() {
  return(
   <div className="App">
     <Hello/>
-    <Welcome name ={myName} age ={26}/>
+    <Welcome name ={myName} />
+
     
   </div>
  )
