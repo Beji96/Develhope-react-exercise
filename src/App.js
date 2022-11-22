@@ -4,7 +4,7 @@ import Hello from './Hello';
 import Welcome from './Welcome';
 
 function App() {
-  const myName = "Flavius"
+  const myName = "John"
  return(
   <div className="App">
     <Hello/>
