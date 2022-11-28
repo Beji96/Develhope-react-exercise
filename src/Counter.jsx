@@ -3,21 +3,31 @@ import React from 'react'
 
 export default class Counter extends React.Component {
   state ={
-    count: 0
+    count: this.props.initialValue,
   }
   constructor(props){
     super(props)
     setInterval(()=>{
-        this.setState({
-            count: this.state.count +1
-        })
-    }, 1000)
+        this.setState((state)=>{
+            return{
+                count: state.count+ this.props.incrementBy 
+            }
+        });
+    },this.props.timeout);
   }
 
   render() {
     return (
-      <div>
-        <h1>Count: {this.state.count}</h1></div>
+      
+        <h1> Count: {this.state.count}</h1>
+        
     )
   }
+}
+
+Counter.defaultProps={
+    timeout: 1000,
+    initialValue: 0,
+    incrementBy: 2,
+
 }

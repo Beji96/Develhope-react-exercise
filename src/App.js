@@ -11,6 +11,7 @@ function App() {
     <Hello/>
     <Welcome name ={myName} age={26}/>
    <Counter/>
+   
   </div>
  )
 }
