@@ -18,11 +18,21 @@ export default class Login extends Component {
         })
     }
    
-  
+  handleLoginState = ()=>{
+    this.setState({
+        username: '',
+        password: '',
+        remember: false,
+    })
+  }
 
   render() {
     return (
       <div>
+        <div>
+            <button onClick={this.handleLoginState}>Login</button>
+        </div>
+        <div>
         <input 
         type="text" 
         name='username' 
@@ -39,9 +49,11 @@ export default class Login extends Component {
         {/* Checkbox */}
         <input 
          type="checkbox"
-         name='remeber'
+         name='remember'
          checked={this.state.remember}
          onChange={this.handleInputChange} />
+        </div>
+        
       </div>
     )
   }
