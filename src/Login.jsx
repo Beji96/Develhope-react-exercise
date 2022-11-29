@@ -23,8 +23,18 @@ export default class Login extends Component {
      this.setState({
       logedIn: true,
     });
+
+    
     
   }
+ handleResetState = ()=> {
+        this.setState({
+        username: "",
+        password: "",
+        remember: false
+    })
+    }
+        
 
   render() {
     return (
@@ -37,6 +47,10 @@ export default class Login extends Component {
                  >Login</button>
                
             </div>
+                    {/* reset btn */}
+                    <div>
+                        <button onClick={this.handleResetState}>Reset</button>
+                    </div>
                 <div>
                     <input 
                     type="text" 
