@@ -1,13 +1,14 @@
 import './App.css';
-import InteractiveWelcome from './InteractiveWelcome';
-import Welcome from './Welcome';
+
+import Login from './Login';
+
 
 
 function App() {
   
  return(
   <div className="App">
-   <InteractiveWelcome/>
+   <Login/>
   </div>
  )
 }
