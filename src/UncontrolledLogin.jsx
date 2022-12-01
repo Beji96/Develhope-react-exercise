@@ -25,7 +25,7 @@ export default class UncontrolledLogin extends Component {
       <div>
         UncontrolledLogin
         <form ref={this._formRef} onSubmit={this.handleFormSubmit}>
-          <input type="text" name="username" autoFocus />
+          <input type="text" name="username" />
           <input type="password" name="password" />
           <input type="checkbox" name="remember" />
 
