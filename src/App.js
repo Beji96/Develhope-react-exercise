@@ -1,5 +1,6 @@
 // import UncontrolledLogin from "./UncontrolledLogin";
 
+import Login from "./Login";
 import Welcome from "./Welcome";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       {/* <TodoList /> */}
       <Welcome />
+      <Login />
       {/* <UncontrolledLogin /> */}
     </div>
   );
