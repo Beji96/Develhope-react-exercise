@@ -1,16 +1,19 @@
 // import UncontrolledLogin from "./UncontrolledLogin";
 
+import Container from "./Container";
 import Login from "./Login";
 import Welcome from "./Welcome";
 
 function App() {
   return (
-    <div className="App">
-      {/* <TodoList /> */}
-      <Welcome />
-      <Login />
-      {/* <UncontrolledLogin /> */}
-    </div>
+    <Container>
+      <div className="App">
+        {/* <TodoList /> */}
+        <Welcome />
+        <Login />
+        {/* <UncontrolledLogin /> */}
+      </div>
+    </Container>
   );
 }
 
