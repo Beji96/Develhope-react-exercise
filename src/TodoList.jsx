@@ -20,6 +20,13 @@ export default class TodoList extends Component {
       newTodo: "",
     });
   };
+
+  resetClick = () => {
+    this.setState({
+      todolist: [],
+      toDo: "",
+    });
+  };
   render() {
     return (
       <div>
@@ -38,6 +45,10 @@ export default class TodoList extends Component {
             value={this.state.newTodo}
             onChange={this.inputChange}
           />
+
+          <button type="reset" onClick={this.resetClick}>
+            Remove
+          </button>
         </div>
       </div>
     );
