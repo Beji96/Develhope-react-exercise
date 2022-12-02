@@ -1,5 +1,7 @@
-import React from 'react'
+import React from "react";
 
-export default function Welcome({ name }) {
-  return <p>Welcome {name}</p>;
+function Welcome() {
+  return <div className="welcome">Welcome</div>;
 }
+
+export default Welcome;
