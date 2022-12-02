@@ -6,7 +6,7 @@ import Welcome from "./Welcome";
 
 function App() {
   return (
-    <Container>
+    <Container title="amazing title">
       <div className="App">
         {/* <TodoList /> */}
         <Welcome />
