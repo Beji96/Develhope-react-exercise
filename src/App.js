@@ -1,22 +1,14 @@
+// import UncontrolledLogin from "./UncontrolledLogin";
 
-import './App.css';
-import ClickCounter from './ClickCounter';
-import ClickTracker from './ClickTracker';
-// import Counter from './Counter';
-import Hello from './Hello';
-import Welcome from './Welcome';
+import TodoList from "./TodoList";
 
 function App() {
-  const myName = "John"
- return(
-  <div className="App">
-    <Hello/>
-    <Welcome name ={myName} age={26}/>
-   {/* <Counter/> */}
-   <ClickCounter/>
-   <ClickTracker/>
-  </div>
- )
+  return (
+    <div className="App">
+      <TodoList />
+      {/* <UncontrolledLogin /> */}
+    </div>
+  );
 }
 
 export default App;
