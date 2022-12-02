@@ -27,12 +27,26 @@ export default class TodoList extends Component {
       toDo: "",
     });
   };
+
+  deleteItem = (event) => {
+    const itemNumber = event.target.parentNode.getAttribute("name");
+    console.log(itemNumber);
+    const rm = this.state.todolist[itemNumber - 1];
+    this.setState({
+      todolist: this.state.todolist.filter((e) => e !== rm),
+    });
+  };
   render() {
     return (
       <div>
         <ul>
           {this.state.items.map((item) => (
-            <li key={item.id}>{item.title}</li>
+            <li key={item.id} name={item.title}>
+              {item.title}
+              <button type="button" onClick={this.deleteItem}>
+                Delete
+              </button>
+            </li>
           ))}
         </ul>
         <div>
