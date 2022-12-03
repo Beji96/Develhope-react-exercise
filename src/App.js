@@ -1,13 +1,23 @@
-// import UncontrolledLogin from "./UncontrolledLogin";
-import ClickCounter from "./ClickCounter";
-import Login from "./Login";
-function App() {
+import { useState, useEffect } from "react";
+import "./App.css";
+import ClickCount from "./ClickCount";
+
+export default function App() {
+  let [count, setCount] = useState(0);
+
+  const onCounterChange = (event) => {
+    setCount(count + 1);
+  };
+  useEffect(() => {
+    console.log(`the number is ${count}`);
+    return () => {
+      console.log(`the number was ${count}`);
+    };
+  }, [count]);
+
   return (
     <div className="App">
-      <ClickCounter />
-      <Login />
+      <ClickCount click={onCounterChange} count={count} />
     </div>
   );
 }
-
-export default App;
