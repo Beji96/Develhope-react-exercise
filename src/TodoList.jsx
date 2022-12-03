@@ -21,20 +21,34 @@ export default class TodoList extends Component {
     });
   };
 
-  resetClick = () => {
+  resetClick = (e) => {
     this.setState({
-      todolist: [],
-      toDo: "",
+      newTodo: [],
+      // items: "",
     });
+    e.preventDefault();
+    console.log(this.resetClick);
   };
 
   deleteItem = (event) => {
     const itemNumber = event.target.parentNode.getAttribute("name");
     console.log(itemNumber);
-    const rm = this.state.todolist[itemNumber - 1];
+    const rm = this.state.items[itemNumber - 1];
     this.setState({
-      todolist: this.state.todolist.filter((e) => e !== rm),
+      items: this.state.items.filter((e) => e !== rm),
     });
+  };
+
+  renderItems = (items, deleteItem) => {
+    return items.map((item) => (
+      <li key={item.id} name={item.id}>
+        {item.title}
+        <span> </span>
+        <button type="button" onClick={deleteItem}>
+          Delete
+        </button>
+      </li>
+    ));
   };
   render() {
     return (
@@ -63,6 +77,7 @@ export default class TodoList extends Component {
           <button type="reset" onClick={this.resetClick}>
             Remove
           </button>
+          <ul>{this.renderItems(this.state.items, this.deleteItem)}</ul>
         </div>
       </div>
     );
