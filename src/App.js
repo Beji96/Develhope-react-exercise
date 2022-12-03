@@ -1,19 +1,9 @@
 // import UncontrolledLogin from "./UncontrolledLogin";
 
-import TodoList from "./TodoList";
+import { DisplayLanguage } from "./DisplayLanguage";
 
 function App() {
-  return (
-    // <Container title="amazing title">
-    //   <div className="App">
-    //     {/* <TodoList /> */}
-    //     <Welcome />
-    //     <Login />
-    //     {/* <UncontrolledLogin /> */}
-    //   </div>
-    // </Container>
-    <TodoList />
-  );
+  return <DisplayLanguage />;
 }
 
 export default App;
