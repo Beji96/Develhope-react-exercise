@@ -1,7 +1,6 @@
-export function Sum({ numbers = [1, 2, 3, 3, 4] }) {
-  return (
-    <div className="Sum">
-      <h1>{numbers.reduce((a, b) => a + b, 0)}</h1>
-    </div>
-  );
+export default function Sum({ numbers }) {
+  return <h1>{numbers.reduce((current, number) => current + number)}</h1>;
 }
+Sum.defaultProps = {
+  numbers: [0],
+};
