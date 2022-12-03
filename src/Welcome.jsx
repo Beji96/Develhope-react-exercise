@@ -1,7 +1,11 @@
 import React from "react";
 
-function Welcome() {
-  return <div className="welcome">Welcome</div>;
+function Welcome({ name = "Flavius" }) {
+  return (
+    <div>
+      <h2>Hello {name}</h2>
+    </div>
+  );
 }
 
 export default Welcome;
