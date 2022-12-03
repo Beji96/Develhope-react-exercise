@@ -1,9 +1,9 @@
 // import UncontrolledLogin from "./UncontrolledLogin";
 
-import { DisplayLanguage } from "./DisplayLanguage";
+import Welcome from "./Welcome";
 
 function App() {
-  return <DisplayLanguage />;
+  return <Welcome />;
 }
 
 export default App;
