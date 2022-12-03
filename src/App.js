@@ -1,15 +1,9 @@
 // import UncontrolledLogin from "./UncontrolledLogin";
-
-import Welcome from "./Welcome";
-import Sum from "./Sum";
-
+import ClickCounter from "./ClickCounter";
 function App() {
-  const numbers = [1, 2, 3, 4];
   return (
     <div className="App">
-      <Welcome />
-
-      <Sum numbers={numbers} />
+      <ClickCounter />
     </div>
   );
 }
