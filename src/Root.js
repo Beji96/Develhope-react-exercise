@@ -3,8 +3,10 @@ import App from "./App";
 
 export default function Root() {
   return (
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </div>
   );
 }
