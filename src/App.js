@@ -1,15 +1,14 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import "./App.css";
-import Welcome from "./Welcome";
+import ClickCounter from "./ClickCounter";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
+      <Link to="/counter">Go to Counter</Link>
       <Routes>
-        <Route path="/" element={<Welcome name="Flavius" />} />
+        <Route path="/counter" element={<ClickCounter />} />
       </Routes>
     </div>
   );
 }
-
-export default App;
