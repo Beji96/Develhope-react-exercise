@@ -1,10 +1,13 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import FilteredList from "./FilteredList";
+import Welcome from "./Welcome";
 
 function App() {
   return (
     <div className="App">
-      <FilteredList />
+      <Routes>
+        <Route path="/" element={<Welcome name="Flavius" />} />
+      </Routes>
     </div>
   );
 }
