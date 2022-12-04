@@ -1,19 +1,18 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link, useParams } from "react-router-dom";
 import "./App.css";
-import Home from "./Home";
-import GithubUser from "./GithubUser";
-import Counter from "./Counter";
-import NotFound from "./NotFound";
+import GhUser from "./GhUser";
+import GhUserList from "./GhUserList";
+import ShowGithubUser from "./ShowGithubUser";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <h1>Github User Loader App</h1>
+      <Link to="/users">Open Search</Link>
       <Routes>
-        <Route path="/" element={<p>Home</p>} />
-        <Route path="/counter" element={<Counter />} />
-        <Route path="/user" element={<GithubUser />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/users" element={<GhUser />}>
+          <Route path=":username" element={<ShowGithubUser />} />
+        </Route>
       </Routes>
     </div>
   );
