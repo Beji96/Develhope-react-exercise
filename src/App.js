@@ -1,19 +1,18 @@
-import { Route, Routes, Link } from "react-router-dom";
+import { useState } from "react";
 import "./App.css";
-import GhUser from "./GhUser";
-import ShowGithubUser from "./ShowGithubUser";
+import GithubUser from "./GithubUser";
 
 function App() {
+  const [username, setUsername] = useState("");
+
   return (
     <div className="App">
-      <h1>Github User Loader App</h1>
-      <Link to="/users">Open Search</Link>
-      <Routes>
-        <Route path="/users" element={<GhUser />}>
-          <Route element={<p>Add a user </p>} />
-          <Route path=":username" element={<ShowGithubUser />} />
-        </Route>
-      </Routes>
+      <input
+        type="text"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      <GithubUser username={username} />
     </div>
   );
 }
